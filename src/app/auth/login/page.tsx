@@ -2,70 +2,33 @@ import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen bg-slate-50">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded-xl bg-slate-900" />
-          <div>
-            <div className="text-sm font-semibold text-slate-900">Slavpost</div>
-            <div className="text-xs text-slate-500">ЛК для отправителей-юрлиц</div>
-          </div>
-        </Link>
-
-        <Link
-          href="/auth/register"
-          className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50"
-        >
-          Получить доступ
-        </Link>
-      </header>
-
-      <section className="mx-auto max-w-6xl px-6 py-10">
-        <div className="mx-auto max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h1 className="text-xl font-bold text-slate-900">Вход</h1>
-          <p className="mt-1 text-sm text-slate-600">
-            Войдите по email и паролю. Если вы впервые — зарегистрируйтесь.
-          </p>
-
-          <div className="mt-5 grid gap-3">
-            <label className="grid gap-1">
-              <span className="text-sm font-medium text-slate-900">Email</span>
-              <input
-                placeholder="name@company.ru"
-                className="h-11 rounded-xl border border-slate-200 px-3 text-sm outline-none focus:ring-2 focus:ring-slate-200"
-              />
-            </label>
-
-            <label className="grid gap-1">
-              <span className="text-sm font-medium text-slate-900">Пароль</span>
-              <input
-                type="password"
-                placeholder="••••••••"
-                className="h-11 rounded-xl border border-slate-200 px-3 text-sm outline-none focus:ring-2 focus:ring-slate-200"
-              />
-            </label>
-
-            <Link
-              href="/dashboard"
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-xl bg-slate-900 text-sm font-semibold text-white hover:bg-slate-800"
-            >
-              Войти (демо)
-            </Link>
-
-            <div className="flex items-center justify-between text-sm">
-              <Link
-                href="/auth/forgot-password"
-                className="text-slate-600 hover:text-slate-900"
-              >
-                Забыли пароль?
-              </Link>
-              <Link href="/auth/register" className="font-semibold text-slate-900 hover:underline">
-                Получить доступ
-              </Link>
+    <div className="min-h-screen bg-slate-50">
+      <div className="mx-auto flex min-h-screen max-w-7xl items-center justify-center px-6">
+        <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="mb-6">
+            <div className="text-xl font-extrabold text-slate-900">Вход в Slavpost</div>
+            <div className="mt-1 text-sm text-slate-600">
+              Демоверсия. Нажмите “Войти”, чтобы попасть в кабинет.
             </div>
           </div>
+
+          <form action="/auth/login" method="post" className="space-y-3">
+            <button
+              type="submit"
+              className="w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+            >
+              Войти
+            </button>
+          </form>
+
+          <div className="mt-4 text-sm text-slate-600">
+            Нет доступа?{" "}
+            <Link className="font-semibold text-slate-900 underline" href="/auth/register">
+              Получить доступ
+            </Link>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }
