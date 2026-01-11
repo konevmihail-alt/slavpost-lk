@@ -1,15 +1,26 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TopBar() {
   return (
     <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
         <Link href="/dashboard" className="flex items-center gap-3">
-          {/* Пока заглушка вместо логотипа — позже вставим logo.png */}
-          <div className="h-10 w-10 rounded-2xl bg-slate-900" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white">
+            <Image
+              src="/logo.png"
+              alt="Slavpost"
+              width={40}
+              height={40}
+              priority
+            />
+          </div>
+
           <div className="leading-tight">
             <div className="text-sm font-extrabold text-slate-900">Slavpost</div>
-            <div className="text-xs text-slate-500">Личный кабинет для отправителей-юридических лиц</div>
+            <div className="text-xs text-slate-500">
+              Личный кабинет для отправителей-юридических лиц
+            </div>
           </div>
         </Link>
 
