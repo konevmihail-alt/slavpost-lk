@@ -32,7 +32,7 @@ export default function TopBar() {
             Поддержка
           </Link>
 
-          <form action="/auth/logout" method="post">
+          <form action="/auth/logout/submit" method="post">
             <button
               type="submit"
               className="rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-800"
