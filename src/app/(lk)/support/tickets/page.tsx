@@ -1,29 +1,16 @@
-import Link from "next/link";
-
 export default function TicketsPage() {
   return (
     <main className="min-h-screen bg-slate-50">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <Link href="/dashboard" className="text-sm font-semibold text-slate-900 hover:underline">
-          ← Панель управления
-        </Link>
-        <div className="text-sm text-slate-600">Раздел: Обращения</div>
-      </header>
+      <section className="mx-auto max-w-6xl px-6 py-6">
+        <h1 className="text-2xl font-bold text-slate-900">Обращения</h1>
+        <p className="mt-1 text-slate-600">
+          Создание обращений и отслеживание статуса: Создано / В работе / Решено.
+        </p>
 
-      <section className="mx-auto max-w-6xl px-6 pb-10">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6">
-          <h1 className="text-xl font-bold text-slate-900">Обращения</h1>
-          <p className="mt-1 text-sm text-slate-600">
-            Здесь будет список обращений и создание нового. Статусы: Создано / В работе / Решено.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button className="h-11 rounded-xl bg-slate-900 px-4 text-sm font-semibold text-white hover:bg-slate-800">
-              Создать обращение (скоро)
-            </button>
-            <button className="h-11 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-900 hover:bg-slate-50">
-              Создать по отправлению (из карточки) — позже
-            </button>
+        <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-6">
+          <div className="text-sm font-semibold text-slate-900">Заглушка</div>
+          <div className="mt-2 text-sm text-slate-600">
+            Следующий шаг: форма нового обращения + список обращений.
           </div>
         </div>
       </section>
