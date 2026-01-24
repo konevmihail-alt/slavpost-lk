@@ -8,12 +8,12 @@ export default function LoginPage() {
               Вход в личный кабинет
             </div>
             <div className="mt-1 text-sm text-slate-500">
-              Деморежим: нажмите «Войти», чтобы установить cookie и перейти в
-              кабинет.
+              Демо-режим: нажмите «Войти», чтобы установить cookie и перейти в кабинет.
             </div>
           </div>
 
-          <form action="/auth/login/submit" method="post" className="space-y-4">
+          {/* Важно: action теперь указывает на API route */}
+          <form action="/api/auth/login" method="post" className="space-y-4">
             <button
               type="submit"
               className="w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-800"
